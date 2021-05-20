@@ -1,0 +1,128 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Rot180 encoder</title>
+</head>
+<body>
+
+<script>
+var rot180 = {
+"S":"S",
+"/":"/",
+"K":"丬",
+"7":"L",
+"d":"p",
+",":"‘",
+"Y":"⅄",
+"E":"Ǝ",
+"y":"ʎ",
+"\"":"„",
+"g":"ɓ",
+"e":"ǝ",
+"J":"ſ̲",
+"|":"|",
+"^":"‿",
+"q":"b",
+"b":"q",
+"D":"p",
+"z":"z",
+"w":"ʍ",
+"$":"$",
+"\\":"\\",
+"~":"∼",
+"-":"-",
+"Q":"Ծ",
+"M":"Ɯ",
+"C":"Ɔ",
+"[":"]",
+"L":"⅂",
+"!":"¡",
+" ":" ",
+"{":"}",
+"X":"X",
+"P":"d",
+"%":"%",
+"#":"#",
+"_":"‾",
+"+":"+",
+")":"(",
+"'":"͵",
+"}":"{",
+"a":"ɐ",
+"T":"⊥",
+"=":"=",
+"N":"N",
+"2":"ჷ",
+"j":"ſ̣",
+"Z":"Z",
+"u":"n",
+"1":",⃓",
+"k":"ʞ",
+"<":">",
+"t":"ʇ",
+"W":"M",
+"v":"ʌ",
+">":"<",
+"s":"s",
+"B":"ϴ",
+"?":"¿",
+"H":"H",
+"c":"ɔ",
+"&":"⅋",
+"I":"I",
+"G":"⅁",
+"(":")",
+"`":" ̖",
+"U":"ᑎ",
+"F":"Ⅎ",
+"r":"ɹ",
+":":":",
+"x":"x",
+"*":"*",
+"V":"Λ",
+"h":"ɥ",
+"0":"0",
+".":"˙",
+"@":"@",
+"f":"ɟ",
+";":"⋅̕",
+"i":"ᴉ",
+"6":"9",
+"A":"Ꮜ",
+"n":"u",
+"O":"O",
+"3":"ε",
+"]":"[",
+"m":"ɯ",
+"9":"6",
+"l":"Ʈ",
+"8":"8",
+"p":"d",
+"4":"⇁⃓",
+"R":"Ȣ",
+"o":"o",
+"5":"ᔕ"
+};
+
+function rotate(str) {
+    var result = "";
+    for(var i=0;i<str.length;i++)        
+        result = (rot180[str[i]] || str[i]) + result;
+    return result;
+}
+
+</script>
+
+<form>
+<h2>Input</h2>
+<textarea rows="10" cols="80" onkeyup="this.form.output.value = rotate(this.value)">
+</textarea>
+<h2>Rot180 encoded</h2>
+<textarea name="output" rows="10" cols="80">
+</textarea>
+</form>
+
+</body>
+</html>
