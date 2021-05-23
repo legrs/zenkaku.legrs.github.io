@@ -109,7 +109,7 @@ var hankakuzenkaku = {
 function rotate(str) {
     var result = "";
     for(var i=0;i<str.length;i++)        
-        result = (hankakuzenkaku) + result;
+        result = (hankakuzenkaku[str[i]]) + result;
     return result;
 }
 
