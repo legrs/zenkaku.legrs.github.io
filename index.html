@@ -8,7 +8,7 @@
 <body>
 
 <script>
-var rot180 = {
+var hankakuzenkaku = {
 "S":"Ｓ",
 "/":"／",
 "K":"Ｋ",
@@ -109,7 +109,7 @@ var rot180 = {
 function rotate(str) {
     var result = "";
     for(var i=0;i<str.length;i++)        
-        result = (rot180[str[i]] || str[i]) + result;
+        result = (hankakuzenkaku[str[i]] || str[i]) + result;
     return result;
 }
 
