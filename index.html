@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>半角から全角a</title>
+<title>半角から全角</title>
 </head>
 <body>
 
@@ -106,13 +106,18 @@ var hankakuzenkaku = {
 "5":"ᔕ"
 };
 
-
+function rotate(str) {
+    var result = "";
+    for(var i=0;i<str.length;i++)        
+        result = (hankakuzenkaku) + result;
+    return result;
+}
 
 </script>
 
 <form>
 <h2>入力</h2>
-<textarea rows="10" cols="80" >
+<textarea rows="10" cols="80" onkeyup="this.form.output.value = rotate(this.value)">
 </textarea>
 <h2>出力</h2>
 <textarea name="output" rows="10" cols="80">
